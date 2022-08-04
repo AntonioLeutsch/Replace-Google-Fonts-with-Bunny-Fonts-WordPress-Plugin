@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Replace Google Fonts with Bunny Fonts
- * Plugin URI:      https://antonio-leutsch.com/
+ * Plugin URI:      https://github.com/AntonioLeutsch/Replace-Google-Fonts-with-Bunny-Fonts-WordPress-Plugin
  * Description:     Easily replace Google Fonts with Bunny Fonts.
  * Author:          antonioleutsch
  * Author URI:      https://antonio-leutsch.com
