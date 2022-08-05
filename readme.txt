@@ -18,12 +18,12 @@ It also replaces the preconnects with the correct ones.
 
 To disable creating a preconnect to fonts.bunny.net, add the following line to your functions.php:
 
- `add_filter('al_bunny_insert_al_bunny_preconnect', '__return_false');`
+`add_filter('al_bunny_insert_al_bunny_preconnect', '__return_false');`
 
 
 To disable removing the google fonts preconnect, add the following line to your functions.php:
 
- `add_filter('al_bunny_remove_google_preconnect', '__return_false');`
+`add_filter('al_bunny_remove_google_preconnect', '__return_false');`
 
 
 == Installation ==
