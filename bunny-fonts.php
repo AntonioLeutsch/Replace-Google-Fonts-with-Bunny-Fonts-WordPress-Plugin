@@ -7,7 +7,7 @@
  * Author URI:      https://antonio-leutsch.com
  * Text Domain:     al_bunny-fonts
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         2.0.0
  *
  * @package         Bunny_Fonts
  */

@@ -3,7 +3,7 @@ Contributors: antonioleutsch
 Donate link: https://paypal.me/antonioleutsch
 Tags: google fonts, bunny fonts, replace, gdpdr, dsgvo
 Requires at least: 4.5
-Tested up to: 6.0.1
+Tested up to: 6.0.2
 Requires PHP: 5.6
 Stable tag: 2.0.0
 License: GPLv2 or later
