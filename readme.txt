@@ -20,10 +20,13 @@ To disable creating a preconnect to fonts.bunny.net, add the following line to y
 
 `add_filter('al_bunny_insert_al_bunny_preconnect', '__return_false');`
 
-
 To disable removing the google fonts preconnect, add the following line to your functions.php:
 
 `add_filter('al_bunny_remove_google_preconnect', '__return_false');`
+
+To disable removing the google fonts dns-prefetch, add the following line to your functions.php:
+
+`add_filter('al_bunny_remove_google_prefetch', '__return_false');`
 
 
 == Installation ==
@@ -34,6 +37,12 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 2.0 =
+* Added support for Autoptimize Plugin
+* added filter to disable dns-prefetch to google fonts
+* change filter name from `al_bunny_insert_al_bunny_preconnect` to `al_bunny_insert_bunny_preconnect`
+
 
 = 1.0 =
 * initial release
