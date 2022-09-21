@@ -39,6 +39,7 @@ This section describes how to install the plugin and get it working.
 == Changelog ==
 
 = 2.0 =
+* Added support for WP Fastest Cache Plugin
 * Added support for Autoptimize Plugin
 * added filter to disable dns-prefetch to google fonts
 * change filter name from `al_bunny_insert_al_bunny_preconnect` to `al_bunny_insert_bunny_preconnect`

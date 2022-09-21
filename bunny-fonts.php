@@ -29,6 +29,16 @@ if (is_plugin_active('autoptimize/autoptimize.php')) {
         return apply_filters('al_bunny_fonts_filter_output', $content);
     });
 
+}
+/**
+ * Check if wp-fastest-cache is active
+ */
+elseif (is_plugin_active('wp-fastest-cache/wpFastestCache.php')) {
+
+    add_filter('wpfc_buffer_callback_filter', function ($content) {
+        return apply_filters('al_bunny_fonts_filter_output', $content);
+    });
+
 } else {
 
     //we use 'init' action to use ob_start()
