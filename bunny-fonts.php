@@ -46,6 +46,14 @@ elseif (is_plugin_active('wp-rocket/wp-rocket.php')) {
     add_filter('rocket_buffer', function ($content) {
         return apply_filters('al_bunny_fonts_filter_output', $content);
     });
+
+} /**
+ * Check if w3-total-cache is active
+ */
+elseif (is_plugin_active('w3-total-cache/w3-total-cache.php')) {
+    add_filter('w3tc_process_content', function ($content) {
+        return apply_filters('al_bunny_fonts_filter_output', $content);
+    });
 } else {
 
     //we use 'init' action to use ob_start()
