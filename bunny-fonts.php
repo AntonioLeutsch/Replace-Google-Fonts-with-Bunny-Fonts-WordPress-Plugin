@@ -29,8 +29,7 @@ if (is_plugin_active('autoptimize/autoptimize.php')) {
         return apply_filters('al_bunny_fonts_filter_output', $content);
     });
 
-}
-/**
+} /**
  * Check if wp-fastest-cache is active
  */
 elseif (is_plugin_active('wp-fastest-cache/wpFastestCache.php')) {
@@ -39,6 +38,14 @@ elseif (is_plugin_active('wp-fastest-cache/wpFastestCache.php')) {
         return apply_filters('al_bunny_fonts_filter_output', $content);
     });
 
+} /**
+ * Check if wp-rocket is active
+ */
+elseif (is_plugin_active('wp-rocket/wp-rocket.php')) {
+
+    add_filter('rocket_buffer', function ($content) {
+        return apply_filters('al_bunny_fonts_filter_output', $content);
+    });
 } else {
 
     //we use 'init' action to use ob_start()
