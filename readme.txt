@@ -5,7 +5,7 @@ Tags: google fonts, bunny fonts, replace, gdpdr, dsgvo
 Requires at least: 4.5
 Tested up to: 6.0.2
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 2.1 =
+* Added support for WP Rocket
+* Added support for WP Super Cache
+* Added support for W3 Total Cache
 
 = 2.0 =
 * Added support for WP Fastest Cache Plugin
