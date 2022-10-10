@@ -104,21 +104,49 @@ add_filter('al_bunny_fonts_filter_output', function ($output) {
     }
 
     if (apply_filters('al_bunny_remove_google_preconnect', true)) {
-        // if html contains <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> remove it
-        if (str_contains($output, '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>')) {
-            $output = str_replace('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', '', $output);
-        }
 
-        // if html contains <link rel="preconnect" href="https://fonts.googleapis.com"> remove it
-        if (str_contains($output, '<link rel="preconnect" href="https://fonts.googleapis.com">')) {
-            $output = str_replace('<link rel="preconnect" href="https://fonts.googleapis.com">', '', $output);
+        /**
+         * Lookup for preconnect to fonts.googleapis.com
+         */
+        $preconnect_lookups = [
+            '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+            '<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />',
+            '<link href="https://fonts.gstatic.com" rel="preconnect" />',
+            '<link rel="preconnect" href="https://fonts.googleapis.com">',
+            '<link href="https://fonts.googleapis.com" crossorigin rel="preconnect" />',
+            '<link href="https://fonts.googleapis.com" rel="preconnect" />'
+        ];
+
+        $preconnect_lookups = apply_filters('al_bunny_preconnect_lookup', $preconnect_lookups);
+
+        /**
+         * Remove preconnects
+         */
+        foreach ($preconnect_lookups as $preconnect_lookup) {
+            $output = str_replace($preconnect_lookup, '', $output);
         }
     }
 
     if (apply_filters('al_bunny_remove_google_prefetch', true)) {
-        // if html contains <link rel='dns-prefetch' href='//fonts.googleapis.com' /> remove it
-        if (str_contains($output, "<link rel='dns-prefetch' href='//fonts.googleapis.com' />")) {
-            $output = str_replace("<link rel='dns-prefetch' href='//fonts.googleapis.com' />", '', $output);
+
+
+        /**
+         * Lookup for prefetch to fonts.googleapis.com
+         */
+        $prefetch_lookups = [
+            '<link rel="dns-prefetch" href="https://fonts.googleapis.com">',
+            '<link rel="dns-prefetch" href="https://fonts.gstatic.com">',
+            '<link href="https://fonts.googleapis.com" rel="dns-prefetch">',
+            '<link href="https://fonts.gstatic.com" rel="dns-prefetch">'
+        ];
+
+        $prefetch_lookups = apply_filters('al_bunny_prefetch_lookup', $prefetch_lookups);
+
+        /**
+         * Remove prefetches
+         */
+        foreach ($prefetch_lookups as $prefetch_lookup) {
+            $output = str_replace($prefetch_lookup, '', $output);
         }
     }
 
