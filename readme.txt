@@ -5,7 +5,7 @@ Tags: google fonts, bunny fonts, replace, gdpdr, dsgvo
 Requires at least: 4.5
 Tested up to: 6.0.2
 Requires PHP: 5.6
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 2.1.2 =
+* add polyfill for str_contains() function
 
 = 2.1.1 =
 * Adding Array of strings for replacing and removing different spellings of Google Fonts
